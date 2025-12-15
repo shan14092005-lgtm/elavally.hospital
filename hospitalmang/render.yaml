@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: hospital-management
+    env: java
+    buildCommand: mvn clean package -DskipTests
+    startCommand: java -jar target/hospital-management-1.0.0.jar
+    envVars:
+      - key: PORT
+        value: 8080
